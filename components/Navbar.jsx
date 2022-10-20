@@ -12,12 +12,12 @@ const Navbar = () => {
   return (
     <div className="navbar-container">
       <p className="logo">
-        <Link href="/">Lek's Headphones</Link>
+        <Link href="/">EML's Headphones</Link>
       </p>
 
       <button type="button" className="cart-icon" onClick={() => setShowCart(true)}>
         <AiOutlineShopping />
-        {/* <span className="cart-item-qty">{totalQuantities}</span> */}
+        <span className="cart-item-qty">1</span>
       </button>
 
       {/* {showCart && <Cart />} */}
