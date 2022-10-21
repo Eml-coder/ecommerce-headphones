@@ -54,10 +54,11 @@ const ProductDetails = ({ product, products }) => {
           <p className="price">${price}</p>
           <div className="quantity">
             <h3>Quantity:</h3>
-            <p className="quantity-desc">
-               {/* <span className="minus" onClick={decQty}><AiOutlineMinus /></span> */}
-              {/* <span className="num">{qty}</span>  */}
-              {/* <span className="plus" onClick={incQty}><AiOutlinePlus /></span>  */}
+            {/* syntax error of onclick caused the incremental error*/}
+            <p className="quantity-desc"> 
+               <span className="minus" onClick={decQty}><AiOutlineMinus /></span> 
+              <span className="num">{qty}</span> 
+               <span className="plus" onClick={incQty}><AiOutlinePlus /></span> 
             </p>
           </div>
           <div className="buttons">

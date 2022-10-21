@@ -1,4 +1,4 @@
-//exporting all the jsx component files here, similar to ejs include boilerplate method.
+//exporting all the jsx component files here, similar to express ejs include boilerplate method.
 export { default as Footer } from './Footer';
 export { default as Layout } from './Layout';
 export { default as Navbar } from './Navbar';
