@@ -1,4 +1,3 @@
-
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
@@ -14,9 +13,9 @@ const Cart = () => {
   const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
-   const stripe = await getStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
- 
-//Api request to next.js backend
+    const stripe = await getStripe();
+    
+
     const response = await fetch('/api/stripe', {
       method: 'POST',
       headers: {
@@ -81,6 +80,7 @@ const Cart = () => {
                     <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, 'inc') }><AiOutlinePlus /></span>
                   </p>
                   </div>
+                  
                   <button
                     type="button"
                     className="remove-item"
@@ -93,7 +93,7 @@ const Cart = () => {
             </div>
           ))}
         </div>
-        {cartItems.length >= 1 && (//sets total in shopping cart
+        {cartItems.length >= 1 && (
           <div className="cart-bottom">
             <div className="total">
               <h3>Subtotal:</h3>
